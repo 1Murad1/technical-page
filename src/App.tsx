@@ -5,24 +5,24 @@ import "aos/dist/aos.css";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
-import { HomePage } from "./pages/HomePage/HomePage";
-import SupportPage from "./pages/SupportPage/SupportPage";
+// import { HomePage } from "./pages/HomePage/HomePage";
+// import SupportPage from "./pages/SupportPage/SupportPage";
 import ImageBgCustomDesktopLayer from '@/assets/bg-custom-desk-layer.png';
 import ImageBgCustomMobileLayer from '@/assets/bg-custom-mobile-layer.png';
 import BgMobileBottom from '@/assets/custom-bg-bottom-mob.png';
-import { NotFoundPage } from "./pages/NotFoundPage/NotFoundPage";
-import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage/PrivacyPolicyPage";
-import { FaqPage } from "./pages/FAQ/FaqPage";
-import { GuidePage } from "./pages/GuidePage/GuidePage";
-import { ArticlePage } from "./pages/ArticlePage/ArticlePage";
-import { BlogsPage } from "./pages/BlogsPage/BlogsPage";
-import { BlogPage } from "./pages/BlogPage/BlogPage";
-import { BugBounty } from "./pages/BugBounty/BugBounty";
-import { BrandAssetsPage } from "./pages/BrandAssetsPage/BrandAssetsPage";
-import { LegalPage } from "./pages/LegalPage/LegalPage";
-import { TermsOfService } from "./pages/TermsOfService/TermsOfService";
-import BugBountyRules from "./pages/BugBountyRules/BugBountyRules";
-import { ContactUs } from "./pages/ContactUsPage/ContactUs";
+// import { NotFoundPage } from "./pages/NotFoundPage/NotFoundPage";
+// import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage/PrivacyPolicyPage";
+// import { FaqPage } from "./pages/FAQ/FaqPage";
+// import { GuidePage } from "./pages/GuidePage/GuidePage";
+// import { ArticlePage } from "./pages/ArticlePage/ArticlePage";
+// import { BlogsPage } from "./pages/BlogsPage/BlogsPage";
+// import { BlogPage } from "./pages/BlogPage/BlogPage";
+// import { BugBounty } from "./pages/BugBounty/BugBounty";
+// import { BrandAssetsPage } from "./pages/BrandAssetsPage/BrandAssetsPage";
+// import { LegalPage } from "./pages/LegalPage/LegalPage";
+// import { TermsOfService } from "./pages/TermsOfService/TermsOfService";
+// import BugBountyRules from "./pages/BugBountyRules/BugBountyRules";
+// import { ContactUs } from "./pages/ContactUsPage/ContactUs";
 import ServerMaintenance from "./pages/ServerMaintenance/ServerMaintenance";
 
 
@@ -49,12 +49,12 @@ function App() {
         <img className="xs:hidden w-full" src={ImageBgCustomMobileLayer} alt="bg" />
       </div>
 
-      {path !== '/server-maintenance' && <Header />}
+      {path !== '/' && <Header />}
       <main id="main" className="relative z-10">
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/server-maintenance" element={<ServerMaintenance />} />
-          <Route path="/support" element={<SupportPage />} />
+          {/* <Route path="/home" element={<HomePage />} /> */}
+          <Route path="/" element={<ServerMaintenance />} />
+          {/* <Route path="/support" element={<SupportPage />} />
           <Route path="/support/contact-us" element={<ContactUs />} />
           <Route path="/support/:guideId" element={<GuidePage />} >
             <Route path=":articleId" element={<ArticlePage />} />
@@ -68,10 +68,10 @@ function App() {
           <Route path="/bug-bounty" element={<BugBounty />} />
           <Route path="/bug-bounty-rules" element={<BugBountyRules />} />
           <Route path="/brand" element={<BrandAssetsPage />} />
-          <Route path="/*" element={<NotFoundPage />} />
+          <Route path="/*" element={<NotFoundPage />} /> */}
         </Routes>
       </main>
-      {path !== '/server-maintenance' && <Footer />}
+      {path !== '/' && <Footer />}
       <div className="sm:hidden md:block custom-bg-bottom absolute left-0 right-0 bottom-0 h-[35rem] bg-[url('./assets/footer-bg-image.png')] bg-no-repeat bg-contain"></div>
       <div data-aos="fade-up" data-aos-delay="500" className="md:hidden  absolute left-0 right-0 bottom-0 z-0">
         <img src={BgMobileBottom} className="w-full" alt="background mobile" />
